@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../store/auth";
 import { toast } from "react-toastify";
-const URL  ="https://mern-stack-backend-4xqp.onrender.com";
+
 
 export const Login = () => {
   const [user, setUser] = useState({
@@ -13,8 +13,9 @@ export const Login = () => {
 
   const navigate = useNavigate();
 
-  const {storeTokenInLs } = useAuth();
-
+  const {storeTokenInLs, API } = useAuth();
+const URL = `${API}/api/auth/login`;
+  
 const handleInput = (e) => {
   let name = e.target.name;
   let value = e.target.value;
