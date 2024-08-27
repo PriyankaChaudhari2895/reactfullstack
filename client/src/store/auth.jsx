@@ -82,7 +82,7 @@ userAuthentication();
 },[]);
 
 
-    return( <AuthContext.Provider value={ { isLoggedIn, storeTokenInLs, LogoutUser, user, services, authorizationToken, isLoading }}> 
+    return( <AuthContext.Provider value={ { isLoggedIn, storeTokenInLs, LogoutUser, user, services, authorizationToken, isLoading, API, }}> 
     {children}
     </AuthContext.Provider>
     );
