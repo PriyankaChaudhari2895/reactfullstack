@@ -8,7 +8,7 @@ const [users, setUsers] = useState([]);
 
  const getAllUsersData =  async()  => {
 try {
-    const response = await fetch("http://localhost:5000/api/admin/users", {
+    const response = await fetch("https://mern-stack-backend-4xqp.onrender.com", {
         method:"GET",
         headers: {
             Authorization: authorizationToken ,
