@@ -36,7 +36,7 @@ return localStorage.removeItem("token");
 const userAuthentication = async () => {
 try {
   setISLoading(true);
-  const response = await fetch ("http://localhost:5000/api/auth/user",
+  const response = await fetch (`{API}/api/auth/user`,
     {
      method: "GET",
      headers: {
@@ -61,7 +61,7 @@ try {
 
 const getServices = async () => {
 try {
-  const response = await fetch("http://localhost:5000/api/data/service", 
+  const response = await fetch(`{API}/api/data/service`, 
     {
       method: "GET",
     });
