@@ -3,7 +3,7 @@ import {useNavigate} from "react-router-dom";
 import { useAuth } from "../store/auth";
 import { toast } from "react-toastify";
 
-const URL ="http://localhost:5000/api/auth/register";
+const URL =`{API}/api/auth/register`;
 
  export const Register = () => {
   const [user, setUser] = useState({
@@ -15,7 +15,7 @@ const URL ="http://localhost:5000/api/auth/register";
 
   
   const navigate = useNavigate();
-const {storeTokenInLs} = useAuth();
+const {storeTokenInLs, API} = useAuth();
 
 // handling input values 
   const handleInput = (e) => {
