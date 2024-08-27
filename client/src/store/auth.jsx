@@ -12,6 +12,10 @@ const [isLoading, setISLoading] = useState(true);
 const [services , setServices] = useState([]);
 const authorizationToken = `Bearer ${token}`;
 
+
+const API = import.meta.env.VITE_APP_URI_API;
+
+   
 const storeTokenInLs = (serverToken) => {
   setToken(serverToken);
 return localStorage.setItem("token", serverToken);
